@@ -1,0 +1,22 @@
+{
+	"name": "Backup bookmarks",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Backup your bookmarks from the Chrome",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"bookmarks"
+	],
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+        "default": "Ctrl+Shift+B",
+        "mac": "MacCtrl+Shift+B"
+			},
+			"description": "Opens popup.html"
+		}
+	}
+}
