@@ -13,8 +13,8 @@
 	"commands": {
 		"_execute_browser_action": {
 			"suggested_key": {
-        "default": "Ctrl+Shift+B",
-        "mac": "MacCtrl+Shift+B"
+        "default": "Ctrl+B",
+        "mac": "MacCtrl+B"
 			},
 			"description": "Opens popup.html"
 		}
