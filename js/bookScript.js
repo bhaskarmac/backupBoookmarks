@@ -13,7 +13,7 @@ backupButton.addEventListener('click', function () {
 		console.log('getTree=>', results);
 		traverseBookmarks(results);
 		// console.log('bmMarkup=>', bmMarkup);
-		// download('test.html', bmMarkup);
+		download('test.html', bmMarkup);
 	});
 });
 
