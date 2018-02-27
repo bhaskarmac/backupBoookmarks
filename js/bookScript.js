@@ -11,8 +11,9 @@ backupButton.addEventListener('click', function () {
 	chrome.bookmarks.getTree(function (results) {
 		traverseBookmarks(results);
 		// console.log('bmMarkup=>', bmMarkup);
-		bmMarkup += '<div style="display:none;" id="importJSON">'+ JSON.stringify(results) +'</div>';
-		download('test.html', bmMarkup);
+		bmMarkup += '<div style="display:none;" id="importJSON">' + JSON.stringify(results) + '</div>';
+		var dateObj = new Date();
+		download('bookmarks_' + parseInt(dateObj.getMonth() + 1) + '_' + dateObj.getDate() + '_' + dateObj.getFullYear() + '.html', bmMarkup);
 	});
 });
 
