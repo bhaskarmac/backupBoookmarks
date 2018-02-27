@@ -10,8 +10,20 @@ backupButton.addEventListener('click', function () {
 	chrome.bookmarks.getTree(function (results) {
 		console.log('getTree=>', results);
 		// download('test.txt', 'Hello world!');
-		download('test.html', '<h1>hello</h1>');
+		// download('test.html', '<h1>hello</h1>');
+		printBM(results);
 	});
+
+	function printBM(bmObject) {
+		for (var key in bmObject) {
+			if (typeof(bmObject[key]) == 'object') {
+				printBM(bmObject[key]);
+			} else {
+				console.log(key + ": " + bmObject[key]);
+			}
+		}
+	}
+
 });
 
 function download(filename, text) {
