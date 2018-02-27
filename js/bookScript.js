@@ -6,6 +6,7 @@ var backupButton = document.querySelector('#btnBackup');
 backupButton.addEventListener('click', function () {
 	console.log('backupButton clicked=>');
 	bmMarkup = '';
+	bmMarkup = '<style>body{font-family:verdana;font-size:14px;}</style>';
 	//API call to get the all bookmarks
 	chrome.bookmarks.getTree(function (results) {
 		traverseBookmarks(results);
